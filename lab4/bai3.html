@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="sup.js"></script>
+</head>
+<body ng-app="mysup"><!-- Định nghĩa khu vực dùng angular-->
+    <div ng-controller="infoController">
+        <table class="table table-bordered table-condensed" border="1">
+            <tr>
+                <th>Hình ảnh</th>
+                <th>Tên</th>
+                <th>Ngày sinh</th>
+                <th>Giới tính</th>
+                <th>Điểm trung bình</th>
+            </tr>
+            <tr ng-repeat="if in info">
+                <td><img src="{{ if.photo }}" height="60px"></td>
+                <td>{{ if.hoten }}</td>
+                <td>{{ if.ngaysinh }}</td>
+                <td>{{ if.gioitinh }}</td>
+                <td>{{ if.diemtb }}</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
